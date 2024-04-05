@@ -1,0 +1,8 @@
+@import "reset", "fonts", "mixins", "media", "variables", "utils", "globals";
+
+@import "blocks/header", "blocks/hero", "blocks/collection";
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}

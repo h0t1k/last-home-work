@@ -1,0 +1,36 @@
+.header {
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+  &__navigation-list {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  &__navigation-link {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  &__navigation-button {
+    display: flex;
+
+    align-items: center;
+    column-gap: 12px;
+    padding: 0px 30px;
+    color: #fff;
+    font-size: 16px;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--border-radius);
+    height: var(--button-height);
+  }
+}

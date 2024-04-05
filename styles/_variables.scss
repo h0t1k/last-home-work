@@ -1,0 +1,18 @@
+:root {
+  --color-dark: #2b2b2b;
+  --color-dark-alt: #3b3b3b;
+  --color-gray: #858584;
+  --color-light: #ffffff;
+  --color-accent: #a259ff;
+
+  --border: 2px solid var(--color-accent, #a259ff);
+  --border-radius: 20px;
+
+  --font-family-base: "Wokr Sans", sans-serif;
+
+  --input-height: 46px;
+  --input-height-alt: 60px;
+  --button-height: 60px;
+
+  --transition-duration: 0.2s;
+}

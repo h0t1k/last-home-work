@@ -1,0 +1,160 @@
+.hero {
+  padding: 80px 115px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+
+  @include desktop {
+    padding-inline: 72px;
+  }
+
+  @include tablet-s {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    padding: 40px 30px;
+  }
+
+  &-top {
+    @include tablet-s {
+      order: 1;
+    }
+  }
+  &__title {
+    font-size: 67px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 505px;
+
+    @include desktop {
+      font-size: 38px;
+    }
+
+    @include tablet-s {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__descr {
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    max-width: 480px;
+    @include desktop {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include tablet-s {
+    }
+  }
+
+  &-left {
+    @include tablet-s {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__button {
+    display: flex;
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    height: var(--button-height);
+    color: var(--color-light);
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-accent);
+    margin-bottom: 20px;
+
+    @include tablet-s {
+      order: 3;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 30px;
+
+    @include tablet-s {
+      order: 4;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &-numb {
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: capitalize;
+
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+
+    &-text {
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: capitalize;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 510px;
+
+    @include desktop {
+      max-width: 330px;
+    }
+    @include tablet-s {
+      max-width: 315px;
+    }
+  }
+  &__image {
+    display: flex;
+    max-width: 510px;
+
+    @include desktop {
+      max-width: 330px;
+    }
+
+    @include tablet-s {
+      max-width: 315px;
+    }
+  }
+  &__right-image {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-transform: capitalize;
+  }
+  &__right-info {
+    padding: 20px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    background-color: var(--color-dark-alt);
+  }
+
+  &__right-avatar {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  &__right-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

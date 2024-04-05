@@ -1,0 +1,115 @@
+.collection {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+
+  @include desktop {
+    padding: 40px 72px;
+    row-gap: 40px;
+  }
+
+  @include tablet-s {
+    padding-inline: 30px;
+  }
+
+  .header {
+    &__title {
+      font-size: 38px;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      line-height: 120%; /* 45.6px */
+
+      @include desktop {
+        font-size: 28px;
+      }
+    }
+    &__descr {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+  .body {
+    &__list {
+      display: flex;
+      column-gap: 30px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      @include desktop {
+        &:last-child {
+          position: absolute !important;
+          width: 1px !important;
+          height: 1px !important;
+          margin: -1px !important;
+          border: 0 !important;
+          padding: 0 !important;
+          white-space: nowrap !important;
+          clip-path: inset(100%) !important;
+          clip: rect(0 0 0 0) !important;
+          overflow: hidden !important;
+        }
+      }
+
+      @include tablet-s {
+        &:nth-child(2) {
+          position: absolute !important;
+          width: 1px !important;
+          height: 1px !important;
+          margin: -1px !important;
+          border: 0 !important;
+          padding: 0 !important;
+          white-space: nowrap !important;
+          clip-path: inset(100%) !important;
+          clip: rect(0 0 0 0) !important;
+          overflow: hidden !important;
+        }
+      }
+    }
+    &__item-top {
+      display: flex;
+    }
+    &__item-midl {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 15px;
+    }
+  }
+  .item-bottom {
+    &__title {
+      font-size: 22px;
+      line-height: 140%; /* 30.8px */
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+    &__avatar {
+      display: flex;
+      column-gap: 12px;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+
+  .card-bg {
+    padding: 32px 15px;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    &__text {
+      font-weight: 700;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+  }
+}
