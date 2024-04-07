@@ -1,0 +1,41 @@
+.categories {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  &-header__title {
+    font-size: 38px;
+    line-height: 120%; /* 45.6px */
+    text-transform: capitalize;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      background-color: var(--color-dark-alt);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      &-position {
+        position: relative;
+      }
+    }
+    &__image {
+      filter: blur(7.5px);
+    }
+    &__icon {
+      @include abs-center;
+    }
+
+    &__bg {
+      padding: 20px 30px 25px;
+    }
+  }
+}

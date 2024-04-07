@@ -497,6 +497,123 @@ body a {
   text-transform: capitalize;
 }
 
+.creators {
+  padding: 80px 115px;
+}
+.creators-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.creators-header__title {
+  font-size: 38px;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.creators-header__descr {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+  text-transform: capitalize;
+}
+.creators-header__button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 12px;
+  padding-inline: 50px;
+  height: var(--button-height);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--color-light);
+  font-size: 16px;
+  line-height: 140%; /* 22.4px */
+}
+.creators-card__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.creators-card__list:last-child {
+  margin-bottom: 0px;
+}
+.creators-card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+}
+.creators-card__item-avatar {
+  margin-bottom: 20px;
+}
+.creators-card__item-name {
+  text-align: center;
+  font-size: 22px;
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.creators-card__item-coast {
+  display: flex;
+  column-gap: 10px;
+  color: #858584;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.creators-card__item-crypt {
+  color: var(--color-light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+.categories {
+  padding: 80px 115px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+.categories-header__title {
+  font-size: 38px;
+  line-height: 120%; /* 45.6px */
+  text-transform: capitalize;
+}
+.categories-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.categories-card__list {
+  display: flex;
+  justify-content: space-between;
+}
+.categories-card__item {
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.categories-card__item-position {
+  position: relative;
+}
+.categories-card__image {
+  filter: blur(7.5px);
+}
+.categories-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.categories-card__bg {
+  padding: 20px 30px 25px;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
