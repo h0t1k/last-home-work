@@ -22,9 +22,10 @@
     &__item {
       background-color: var(--color-dark-alt);
       border-radius: var(--border-radius);
-      overflow: hidden;
+
       &-position {
         position: relative;
+        overflow: hidden;
       }
     }
     &__image {
@@ -36,6 +37,11 @@
 
     &__bg {
       padding: 20px 30px 25px;
+
+      &-text {
+        line-height: 140%; /* 30.8px */
+        text-transform: capitalize;
+      }
     }
   }
 }

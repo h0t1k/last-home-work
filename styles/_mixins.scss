@@ -24,3 +24,31 @@
   width: $size;
   aspect-ratio: 1;
 }
+
+@mixin button-transparent {
+  color: var(--color-light);
+  padding-inline: 50px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  height: var(--button-height);
+  font-size: 16px;
+  line-height: 140%; /* 22.4px */
+}
+
+@mixin button-accent {
+  color: var(--color-light);
+  padding-inline: 50px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--color-accent);
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  height: var(--button-height);
+  font-size: 16px;
+  line-height: 140%; /* 22.4px */
+}

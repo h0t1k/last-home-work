@@ -596,10 +596,10 @@ body a {
 .categories-card__item {
   background-color: var(--color-dark-alt);
   border-radius: var(--border-radius);
-  overflow: hidden;
 }
 .categories-card__item-position {
   position: relative;
+  overflow: hidden;
 }
 .categories-card__image {
   filter: blur(7.5px);
@@ -612,6 +612,91 @@ body a {
 }
 .categories-card__bg {
   padding: 20px 30px 25px;
+}
+.categories-card__bg-text {
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+}
+
+.discover {
+  padding: 80px 115px;
+}
+.discover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.discover-header__title {
+  font-size: 38px;
+  line-height: 120%; /* 45.6px */
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.discover-header__descr {
+  font-weight: 400;
+  line-height: 160%; /* 35.2px */
+  text-transform: capitalize;
+}
+.discover-header__button {
+  color: var(--color-light);
+  padding-inline: 50px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  height: var(--button-height);
+  font-size: 16px;
+  line-height: 140%; /* 22.4px */
+}
+.discover-card__list {
+  display: flex;
+  justify-content: space-between;
+}
+.discover-card__item {
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+}
+.discover-card__item-box {
+  padding: 20px 30px 25px;
+}
+.discover-card__item-info {
+  line-height: 140%; /* 30.8px */
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.discover-card__item-name {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.discover-card__item-nickname {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.discover-card__item-price {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.discover-card__item-price-name {
+  display: flex;
+  justify-content: space-between;
+  color: #858584;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+}
+.discover-card__item-price-crypt {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
 }
 
 .container {

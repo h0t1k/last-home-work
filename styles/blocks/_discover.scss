@@ -1,0 +1,80 @@
+.discover {
+  padding: 80px 115px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    &__title {
+      font-size: 38px;
+      line-height: 120%; /* 45.6px */
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    &__descr {
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+
+    &__button {
+      @include button-transparent;
+    }
+  }
+
+  &-card {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      background-color: var(--color-dark-alt);
+      border-radius: var(--border-radius);
+      &-box {
+        padding: 20px 30px 25px;
+      }
+
+      &-info {
+        line-height: 140%; /* 30.8px */
+        text-transform: capitalize;
+        margin-bottom: 5px;
+      }
+
+      &-name {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+      &-nickname {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+      }
+      &-price {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+      }
+      &-price-name {
+        display: flex;
+        justify-content: space-between;
+        color: #858584;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 110%; /* 13.2px */
+      }
+
+      &-price-crypt {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+      }
+    }
+  }
+}
