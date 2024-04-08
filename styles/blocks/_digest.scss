@@ -1,0 +1,51 @@
+.digest {
+  padding: 40px 115px 80px;
+  &-content {
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-dark-alt);
+    border-radius: var(--border-radius);
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    &__inner-title {
+      font-size: 38px;
+      line-height: 120%; /* 45.6px */
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+    &__inner-descr {
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+
+    &__inner-form {
+      position: relative;
+      height: var(--button-height);
+      display: flex;
+    }
+
+    &__inner-button {
+      position: absolute;
+      @include button-accent;
+      right: 0;
+    }
+  }
+}
+input {
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+  max-width: 100%;
+}
+::placeholder {
+  padding: 16px 0px 16px 20px;
+  color: #2b2b2b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
