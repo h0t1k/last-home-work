@@ -1,38 +1,103 @@
 .discover {
   padding: 80px 115px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+
+  row-gap: 60px;
+
+  @include desktop {
+    row-gap: 40px;
+    padding: 40px 72px;
+  }
+
+  @include tablet-s {
+    padding-inline: 30px;
+  }
+
+  @include tablet-s {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
+    flex-grow: 1;
+
+    @include tablet-s {
+      order: 1;
+    }
 
     &__title {
       font-size: 38px;
       line-height: 120%; /* 45.6px */
       margin-bottom: 10px;
       text-transform: capitalize;
+      @include desktop {
+        font-size: 28px;
+      }
     }
 
     &__descr {
       font-weight: 400;
       line-height: 160%; /* 35.2px */
       text-transform: capitalize;
+      @include desktop {
+        font-size: 16px;
+      }
     }
+  }
+  &-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
 
     &__button {
       @include button-transparent;
     }
+    @include tablet-s {
+      order: 3;
+    }
   }
-
   &-card {
+    flex-grow: 3;
+    @include tablet-s {
+      order: 2;
+    }
     &__list {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      @include tablet-s {
+        gap: 20px;
+      }
     }
     &__item {
       background-color: var(--color-dark-alt);
       border-radius: var(--border-radius);
+
+      @include tablet {
+        max-width: 315px;
+        width: 100%;
+        &:last-child {
+          display: flex;
+          align-items: center;
+          column-gap: 70px;
+          flex-direction: row;
+          max-width: 100%;
+        }
+      }
+      @include mobile-s {
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          column-gap: 0;
+          max-width: 315px;
+          width: 100%;
+        }
+      }
+
       &-box {
         padding: 20px 30px 25px;
       }
@@ -74,6 +139,11 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 140%; /* 22.4px */
+        @include tablet {
+          &:last-child {
+            gap: 30px;
+          }
+        }
       }
     }
   }

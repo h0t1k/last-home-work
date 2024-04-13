@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic"
+      rel="stylesheet"
+    />
     <title>NFT</title>
   </head>
   <body>
@@ -18,14 +22,20 @@
       <div class="container">
         <div class="header-menu">
           <div class="header__logo">
-            <img src="./svg/header-logo.svg" alt="icon" loading="lazy" />
+            <img
+              src="./svg/header-logo.svg"
+              alt="icon"
+              loading="lazy"
+              class="header__logo-icon"
+            />
             <img
               src="./svg/header-logo-text.svg"
               alt="logotip text"
               loading="lazy"
+              class="header__logo-text"
             />
           </div>
-          <nav class="header__navigation">
+          <nav class="header__navigation hidden-mobile">
             <ul class="header__navigation-list">
               <li class="header__navigation-item">
                 <a href="#" class="header__navigation-link">Marketplace</a>
@@ -36,11 +46,29 @@
               <li class="header__navigation-item">
                 <a href="#" class="header__navigation-link">Connect a wallet</a>
               </li>
-              <button class="header__navigation-button" type="button">
+              <button
+                class="header__navigation-button hidden-mobile"
+                type="button"
+              >
                 <img src="./svg/user-icon.svg" alt="user" />Sign Up
               </button>
             </ul>
           </nav>
+
+          <button
+            class="header__navigation-burger-menu burger-button visible-mobile"
+            type="button"
+            onclick="mobileOverlay.showModal()"
+          >
+            <img
+              src="./svg/burger.svg"
+              alt="burger button"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <span class="visually-hidden">Open navigation menu</span>
+          </button>
         </div>
       </div>
     </header>
@@ -239,12 +267,12 @@
         <div class="container">
           <div class="creators">
             <div class="creators-header">
-              <div class="creators-header-content">
-                <h2 class="creators-header__title">Top creators</h2>
-                <p class="creators-header__descr">
-                  Checkout Top Rated Creators on the NFT Marketplace
-                </p>
-              </div>
+              <h2 class="creators-header__title">Top creators</h2>
+              <p class="creators-header__descr">
+                Checkout Top Rated Creators on the NFT Marketplace
+              </p>
+            </div>
+            <div class="creators-header-box">
               <button class="creators-header__button" type="button">
                 <img
                   src="./svg/rocket-accent.svg"
@@ -266,12 +294,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">Keepitreal</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">Keepitreal</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -282,12 +312,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">DigiLab</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">DigiLab</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -298,12 +330,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">GravityOne</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">GravityOne</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -314,15 +348,15 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">Juanie</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">Juanie</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
-              </ul>
-              <ul class="creators-card__list">
                 <li class="creators-card__item">
                   <img
                     class="creators-card__item-avatar"
@@ -332,12 +366,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">BlueWhale</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">BlueWhale</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -348,12 +384,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">mr fox</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">mr fox</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -364,12 +402,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">Shroomie</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">Shroomie</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -380,15 +420,15 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">robotica</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">robotica</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
-              </ul>
-              <ul class="creators-card__list">
                 <li class="creators-card__item">
                   <img
                     class="creators-card__item-avatar"
@@ -398,12 +438,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">RustyRobot</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">RustyRobot</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -414,12 +456,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">animakid</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">animakid</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -430,12 +474,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">Dotgu</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">Dotgu</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
                 <li class="creators-card__item">
                   <img
@@ -446,12 +492,14 @@
                     height="120"
                     loading="lazy"
                   />
-                  <p class="creators-card__item-name">Ghiblier</p>
-                  <p class="creators-card__item-coast">
-                    Total Sales:<span class="creators-card__item-crypt"
-                      >34.53 ETH</span
-                    >
-                  </p>
+                  <div class="creators-card__item-box">
+                    <p class="creators-card__item-name">Ghiblier</p>
+                    <p class="creators-card__item-coast">
+                      Total Sales:<span class="creators-card__item-crypt"
+                        >34.53 ETH</span
+                      >
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -558,8 +606,6 @@
                     <span class="categories-card__bg-text">Photography</span>
                   </div>
                 </li>
-              </ul>
-              <ul class="categories-card__list">
                 <li class="categories-card__item">
                   <div class="categories-card__item-position">
                     <img
@@ -665,7 +711,9 @@
                 <h2 class="discover-header__title">Discover More NFTs</h2>
                 <p class="discover-header__descr">Explore new trending NFTs</p>
               </div>
-              <button class="discover-header__button" type="button">
+            </div>
+            <div class="discover-box">
+              <button class="discover-box__button" type="button">
                 <img
                   src="./svg/Eye.svg"
                   alt="rocket"
@@ -779,6 +827,11 @@
           </div>
         </div>
       </section>
+      <section class="section-magic">
+        <div class="container">
+          <div class="magic"></div>
+        </div>
+      </section>
       <section class="section">
         <div class="container">
           <div class="works">
@@ -790,13 +843,7 @@
             <ul class="body__list">
               <li class="body__item">
                 <div class="body__item-image">
-                  <img
-                    src="./image/works-1.png"
-                    alt="icon"
-                    width="250"
-                    height="250"
-                    loading="lazy"
-                  />
+                  <img src="./image/works-1.png" alt="icon" loading="lazy" />
                 </div>
                 <div class="body__item-text">
                   <h3 class="body__item-title">Setup Your wallet</h3>
@@ -808,13 +855,7 @@
               </li>
               <li class="body__item">
                 <div class="body__item-image">
-                  <img
-                    src="./image/works-2.png"
-                    alt="icon"
-                    width="250"
-                    height="250"
-                    loading="lazy"
-                  />
+                  <img src="./image/works-2.png" alt="icon" loading="lazy" />
                 </div>
                 <div class="body__item-text">
                   <h3 class="body__item-title">Create Collection</h3>
@@ -826,13 +867,7 @@
               </li>
               <li class="body__item">
                 <div class="body__item-image">
-                  <img
-                    src="./image/works-3.png"
-                    alt="icon"
-                    width="250"
-                    height="250"
-                    loading="lazy"
-                  />
+                  <img src="./image/works-3.png" alt="icon" loading="lazy" />
                 </div>
                 <div class="body__item-text">
                   <h3 class="body__item-title">Start Earning</h3>
@@ -875,6 +910,7 @@
                     type="text"
                     name="email"
                     placeholder="Enter your email here"
+                    class="digest-content__inner-input"
                   />
                   <button class="digest-content__inner-button" type="submit">
                     <img
@@ -892,6 +928,108 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__menu">
+          <div class="menu-soc1als">
+            <div class="menu-soc1als__logo-image">
+              <img src="./svg/header-logo.svg" alt="icon" loading="lazy" />
+              <img
+                src="./svg/header-logo-text.svg"
+                alt="logotip text"
+                loading="lazy"
+                height="20"
+                width="200"
+              />
+            </div>
+            <div class="menu-soc1als__text">
+              <p class="menu-soc1als__text-description">
+                NFT marketplace UI created with Anima for Figma.
+              </p>
+              <p class="menu-soc1als__text-description">Join our community</p>
+            </div>
+            <ul class="menu-soc1als__list">
+              <li class="menu-soc1als__item-icon">
+                <img
+                  src="./svg/footer-1.svg"
+                  alt="icon soc1als"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+              </li>
+              <li class="menu-soc1als__item-icon">
+                <img
+                  src="./svg/footer-2.svg"
+                  alt="icon soc1als"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+              </li>
+              <li class="menu-soc1als__item-icon">
+                <img
+                  src="./svg/footer-3.svg"
+                  alt="icon soc1als"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+              </li>
+              <li class="menu-soc1als__item-icon">
+                <img
+                  src="./svg/footer-4.svg"
+                  alt="icon soc1als"
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+          <nav class="navigation">
+            <h2 class="navigation__title">Explore</h2>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Marketplace</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Rankings</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Connect a wallet</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="aside">
+            <h3 class="aside__title">Join our weekly digest</h3>
+            <p class="aside__description">
+              Get exclusive promotions & updates straight to your inbox.
+            </p>
+            <form class="aside__form">
+              <input
+                type="text"
+                name="email"
+                placeholder="Enter your email here"
+              />
+              <button class="aside__form-button" type="submit">
+                <img
+                  src="./svg/post.svg"
+                  alt="post"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="bottom__text">Ⓒ NFT Market. Use this template freely.</p>
+        </div>
+      </div>
+    </footer>
     <dialog class="mobile-overlay visible mobile" id="mobileOverlay">
       <form class="mobile-overlay__close-button-wrapper" method="dialog">
         <button class="mobile-oberlay__close-button cross-button" type="submit">

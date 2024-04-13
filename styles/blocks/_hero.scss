@@ -9,15 +9,15 @@
   }
 
   @include tablet-s {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+
     padding: 40px 30px;
   }
 
   &-top {
     @include tablet-s {
-      order: 1;
+      flex-grow: 1;
     }
   }
   &__title {
@@ -47,15 +47,14 @@
       font-size: 16px;
       margin-bottom: 20px;
     }
-
-    @include tablet-s {
-    }
   }
 
   &-left {
     @include tablet-s {
       display: flex;
       flex-direction: column;
+      @include tablet-s {
+      }
     }
   }
   &__button {
@@ -73,7 +72,6 @@
     margin-bottom: 20px;
 
     @include tablet-s {
-      order: 3;
     }
   }
 

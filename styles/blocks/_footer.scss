@@ -1,0 +1,161 @@
+.footer {
+  background-color: var(--color-dark-alt);
+}
+
+.footer__menu {
+  padding: 40px 146px 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    padding: 40px 72px 49px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  @include mobile {
+    padding: 40px 30px 30px;
+  }
+  .menu-soc1als {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &__logo-image {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      max-width: 230px;
+      margin-bottom: 15px;
+      width: 100%;
+      @include tablet {
+        max-width: 690px;
+        width: 100%;
+      }
+
+      &-description {
+        color: #ccc;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+      }
+    }
+
+    &__list {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    &__title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__link {
+      color: #ccc;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+
+  .aside {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+    row-gap: 20px;
+    &:first-child {
+      row-gap: 25px;
+    }
+
+    @include tablet {
+      row-gap: 20px;
+    }
+    &__title {
+      font-family: "Space Mono";
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+
+    &__description {
+      color: #ccc;
+      font-size: 18px;
+
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+      max-width: 330px;
+    }
+    &__form {
+      display: flex;
+      gap: 12px;
+      position: relative;
+      height: var(--button-height);
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 15px;
+        height: 100%;
+      }
+    }
+    &__form-button {
+      position: absolute;
+      @include button-accent;
+      right: 0;
+
+      @include mobile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: var(--button-height);
+      }
+    }
+  }
+}
+
+.bottom {
+  padding: 0px 115px 40px;
+
+  @include desktop {
+    padding-inline: 72px;
+  }
+
+  @include mobile {
+    padding-inline: 30px;
+  }
+  &__text {
+    border-top: 1px solid #858585;
+    padding-top: 20px;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%; /* 13.2px */
+  }
+}

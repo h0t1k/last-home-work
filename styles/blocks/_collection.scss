@@ -7,6 +7,7 @@
   @include desktop {
     padding: 40px 72px;
     row-gap: 40px;
+    justify-content: flex-start;
   }
 
   @include tablet-s {
@@ -14,6 +15,8 @@
   }
 
   .header {
+    @include desktop {
+    }
     &__title {
       font-size: 38px;
       text-transform: capitalize;
@@ -38,40 +41,27 @@
   .body {
     &__list {
       display: flex;
+      flex-wrap: wrap;
       column-gap: 30px;
+      @include desktop {
+        justify-content: center;
+        gap: 30px;
+      }
     }
+
     &__item {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-width: 330px;
+      width: 100%;
+
       @include desktop {
-        &:last-child {
-          position: absolute !important;
-          width: 1px !important;
-          height: 1px !important;
-          margin: -1px !important;
-          border: 0 !important;
-          padding: 0 !important;
-          white-space: nowrap !important;
-          clip-path: inset(100%) !important;
-          clip: rect(0 0 0 0) !important;
-          overflow: hidden !important;
-        }
+        max-width: 315px;
+        width: 100%;
       }
 
       @include tablet-s {
-        &:nth-child(2) {
-          position: absolute !important;
-          width: 1px !important;
-          height: 1px !important;
-          margin: -1px !important;
-          border: 0 !important;
-          padding: 0 !important;
-          white-space: nowrap !important;
-          clip-path: inset(100%) !important;
-          clip: rect(0 0 0 0) !important;
-          overflow: hidden !important;
-        }
       }
     }
     &__item-top {
